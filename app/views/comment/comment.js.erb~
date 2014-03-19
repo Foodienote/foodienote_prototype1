@@ -1,0 +1,2 @@
+$("#write_review").prepend('<%= escape_javascript(render 'comment/new') %>');
+

@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "comment" %>
+<%= form_for :comment, url: comment_index_path(params.merge(:menu_item_id => @menu_item.locu_id)) do |f| %>
+<div class="review_wrapper">
+	<div class="review_header">
+		<div class="rating">
+			<%= rating_for @menu_item, "quantity" %>
+		</div>
+	</div>
+	<div class="review_content">
+		<%= f.text_area :body, :class=>"review_body" %>
+		<%= f.submit :class=>"review_submit" %></td>
+	</div>
+</div>
+<% end %>

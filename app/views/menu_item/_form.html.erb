@@ -1,0 +1,43 @@
+<%= javascript_include_tag "menu_item" %>
+<%= stylesheet_link_tag "menu_item" %>
+<div class="menuitem_wrapper">
+	<div class="menuitem_detail_wrapper">
+		<div class="menuitem_detail_left">
+			<strong><%= @menu_item.name %></strong>
+			<div class="menuitem_rating">
+				4.1 <img src='/assets/star-on.png'>
+				<img src='/assets/star-on.png'>
+				<img src='/assets/star-on.png'>
+				<img src='/assets/star-on.png'>
+				<img src='/assets/star-off.png'>
+				&nbsp;&nbsp;&nbsp;<span style="font-size:0.7em;">23,252 reviews</span>
+			</div>
+		</div>
+		<div class="menuitem_detail_right">
+			<div class="menuitem_price">$22</div>
+			<div class="menuitem_write_link">
+				Write a review
+			</div>
+		</div>
+	</div>	
+	<div class="menuitem_picture"></div>
+	<div class="reviewtypes_wrapper">
+	</div>
+		
+	<div class="review_content_wrapper">
+		<table>
+	<%- @menu_item.comments.order(:date_created).reverse_order.each do |comment| %>
+	<%- next if comment.user.nil? %>
+	<tr>
+		<td><%= rating_for_user @menu_item, comment.user, "quantity" %>
+		<td><%= comment.user.email %></td>
+		<td><%= comment.body %></td>
+	<td><%= comment.get_date_created() %></td>
+	</tr>
+<% end %>
+</table>
+	</div>
+</div>
+
+<%= link_to 'Back to Menu List', restaurant_path(@restaurant) %>
+

@@ -1,0 +1,5 @@
+<%= form_for :search, url: search_create_path, html: { :method => 'GET' } do |f| %>
+	<%= f.text_field :query, :id => "search_query", :placeholder=> "Find Restaurant", :value => @query %>&nbsp;&nbsp;&nbsp;
+	<%= f.text_field :zipcode, :placeholder => "Zipcode", :id => "search_zipcode", :value => @zipcode %>
+	<%= f.submit 'search', :class => "search_submit" %>
+<% end %>

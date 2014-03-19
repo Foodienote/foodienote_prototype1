@@ -1,0 +1,64 @@
+.menuitem_wrapper {
+	position: fixed;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 50em;
+	width: 800px;
+	border-radius:15px;
+	background-color:white;
+	-moz-box-shadow: 5px 5px 10px 5px #bebebe;
+	-webkit-box-shadow: 5px 5px 10px 5px #bebebe;
+}
+
+.menuitem_detail_wrapper {
+	height:120px;
+}
+
+.menuitem_detail_left {
+	color:#a79797;
+	font-size:1.5em;
+	padding-left:50px;
+	padding-top:20px;
+	float:left;
+}
+.menuitem_detail_right {
+	both:clear;
+	float:right;
+	padding-right:50px;
+	padding-top:20px;
+}
+
+.menuitem_price {
+	font-size:2.0em;
+	color:#a18d85;
+}
+
+.menuitem_write_link {
+	padding-top:5px;
+	color:red;
+}
+
+.menuitem_write_link a {
+	color:red;
+	text-decoration:none;
+}
+
+.write_review_wrapper {
+}
+
+.menuitem_rating {
+	padding-top:10px;
+}
+
+.menuitem_picture {
+	height:300px;
+	background:url('/assets/example_dish.png') no-repeat;
+	background-size: 100% 300px;
+}
+
+.reviewtypes_wrapper {
+	height:100px;
+	background-color:#f1f1f1;
+}

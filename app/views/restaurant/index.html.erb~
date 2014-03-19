@@ -1,0 +1,9 @@
+<h1>Listing Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+	<%= link_to restaurant.name, restaurant_path(restaurant) %><BR>
+<% end %>
+<% if @query.nil? || @query == "" %>
+<%= "hello"%>
+<% else %>
+<%= "Search for " + @query %>
+<% end %>

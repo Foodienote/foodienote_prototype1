@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag "restaurant" %>
+<div class="restaurant_info_wrapper"> 
+	<div class="restaurant_name"><%= @restaurant.name.upcase %></div>
+	<div class="restaurant_address"><%= @restaurant.region %></div>
+</div>
+<div class="restaurant_menu_wrapper">
+	<div class="restaurant_submenu_wrapper">
+		<P>BEST OF BEST(6)</P>
+		<P>DINNER(16)</P>
+		<P>BRUNCH(12)</P>
+		<P>LUNCH(20)</P>
+		<P>APPETIZER(16)</P>
+		<P>DRINK(13)</P>
+		<P>DESSERT(15)</P>
+	</div>
+	<div class="restaurant_menuitem_wrapper">
+		<% @restaurant.menu_items.each do |menu_item| %>
+			<%= link_to menu_item_path(menu_item.id) do %>
+			<div class="restaurant_menuitems">
+				<div class="restaurant_menuitems_image"></div>
+				<div class="restaurant_menuitems_info"><%= menu_item.name %></div>
+			</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>
+<%= link_to 'Back', restaurant_index_path %>

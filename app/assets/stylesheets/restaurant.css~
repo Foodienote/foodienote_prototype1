@@ -1,0 +1,86 @@
+.menuitem_panel {
+	background-color:red;
+	width:500px;
+	height:500px;
+	position:fixed;
+	z-index:9999;
+}
+
+.restaurant_info_wrapper {
+	height:75px;
+	background-color:white;
+	left:0;
+	top:75px;
+	position:fixed;
+	width:100%;
+	overflow:hidden;
+
+}
+.restaurant_name {
+	color:#EC3F37;
+	font-size:29px;
+	padding-top:23px;
+	padding-left:2.5em;
+	display: inline-block;
+}
+
+.restaurant_address {
+	color:#928580;
+	padding-left:3.6em;
+	display: inline-block;
+}
+
+.restaurant_menu_wrapper {
+	position:fixed;
+	top:170px;
+}
+
+.restaurant_submenu_wrapper {
+	display: inline-block;
+	width:15%;
+	float:left;
+	padding-left:2%;
+}
+
+.restaurant_submenu_wrapper p {
+	font-weight:bold;
+	color:#a79797;
+	font-size:1.5em;
+	padding: 20px 0;
+}
+
+.restaurant_menuitem_wrapper {
+	display: inline-block;
+	overflow:auto;
+	width:83%;
+	clear:both;
+}
+
+.restaurant_menuitem_wrapper a {
+	text-decoration:none;
+	color:#a79797;
+	font-weight:bold;
+	font-size:1.1em;
+}
+
+.restaurant_menuitems {
+	background:url('/assets/menuitem_whitebox.png') no-repeat;
+	width:345px;
+	height:316px;
+	padding-bottom:2%;
+	padding-right:2%;
+	display: inline-block;
+}
+
+.restaurant_menuitems_image {
+	text-indent:-9999px;
+	background:url('/assets/example_dish.png') no-repeat left;
+	width:339px;
+	top:0px;
+	height:217px;
+}
+
+.restaurant_menuitems_info {
+	position:relative;
+	padding:15px;
+}

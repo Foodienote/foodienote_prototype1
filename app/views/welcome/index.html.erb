@@ -1,0 +1,10 @@
+<%= @query %>
+<%= @geocode %>
+<h2>Restaurants</h2>
+<% @restaurants.each do |restaurant| %>
+	<%= link_to restaurant.name, restaurant_path(restaurant) %><BR>
+<% end %>
+
+<h2>Link</h2>
+<%= link_to "Restaurants", controller: "restaurant" %><br/>
+<%= link_to "Update Restaurant", locu_database_manager_update_path %>

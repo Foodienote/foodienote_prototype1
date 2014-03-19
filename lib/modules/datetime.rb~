@@ -1,0 +1,5 @@
+module Datetime
+	def comment_format(datetime)
+		return 'simplified :D'
+	end
+end

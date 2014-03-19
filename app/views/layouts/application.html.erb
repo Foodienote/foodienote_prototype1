@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FoodieNote</title>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="left">
+				<div class="logo">
+					<a href="/" id="logo">FOODIENOTE</a>
+				</div>
+				<div class="search">
+					<%= render "search/form" %>
+				</div>
+			</div>
+			<div class="right">
+				<div class="usermenu">
+					<%= render "user/form" %>
+				</div>
+			</div>
+		</div>
+		<div class="page_contents">
+			<%= yield %>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  locu_id: MyString
+  name: MyString
+  description: MyText
+  price: 9.99
+  rating: 9.99
+  restaurant_id: 
+
+two:
+  locu_id: MyString
+  name: MyString
+  description: MyText
+  price: 9.99
+  rating: 9.99
+  restaurant_id: 

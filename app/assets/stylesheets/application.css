@@ -1,0 +1,115 @@
+body {
+	font-family:Arial,Helvetica,sans-serif;
+	background-color:#F8F8F8;
+}
+
+#wrapper {
+	background:url('/assets/header_bg.png') top left repeat-x;
+	height:75px;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:1000000;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio:2) {
+	#wrapper {
+		background-image:url('/assets/header_bg.png');
+		background-size:75px auto;
+	}
+	a[id="logo"] {
+		background-image:url('/assets/logo.png');
+		background-size:241px auto;
+	}
+	input[type="submit"] {
+		background-image:url('/assets/search.png');
+	}
+	input[id="search_zipcode"] {
+		background-image:url('/assets/navigation.png');
+	}
+}
+
+.left {
+	float:left;
+	margin-left:20px;
+}
+
+.right {
+	float:right;
+	margin-right:10px;
+}
+
+.logo {
+	display:inline-block;
+	float:left;
+	height:40px;
+	padding-top:15px;
+	padding-left:1.4em;
+	padding-right:5.5em;
+}
+
+a#logo {
+	background:url('/assets/logo.png') left center no-repeat;
+	display:inline-block;
+	float:left;
+	height:40px;
+	text-indent:-9999px;
+	width:241px;
+}
+
+.search {
+}
+
+.search input[type="text"] {
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid transparent;
+	font-family:inherit;
+	font-size:1.1em;
+	height:36px;
+	position: relative;
+	width:27.5em;
+	margin: 14px 1.5em 0 0;
+	outline:none;
+	padding-left:10px;
+}
+
+.search input[id="search_query"] {
+	width:27.5em;
+}
+
+.search input[id="search_zipcode"] {
+	width:22.5em;
+	background:#ffffff url('/assets/navigation.png') no-repeat 370px 12px;
+}
+
+.search input[type="submit"][class="search_submit"] {
+	background:url('/assets/search.png') no-repeat;
+	border:none;
+	cursor:pointer;
+	display:inline-block;
+	height:40px;
+	width: 50px;
+	top:12px;
+	text-indent: -9999px;
+	-webkit-box-shadow: none;
+}
+
+.usermenu {
+	padding-top:15px;
+}
+
+.usermenu a {
+	font-size: 1.5em;
+	color: white;
+	text-decoration: none;	
+	padding-right:30px;
+}
+
+.page_contents {
+	padding-top:80px;
+}
