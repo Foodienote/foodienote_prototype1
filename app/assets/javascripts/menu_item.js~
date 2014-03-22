@@ -1,3 +1,12 @@
-function addReviewType() {
-	alert('hi');
-}
+$(function() {
+    $(".reviewtypes_clip_container")
+        .mouseover(function() { 
+		$(this).find('.reviewtype_bigger').show();
+		$(this).find('.reviewtype_icons').hide();
+        })
+	.mouseout(function() {
+         	$(this).find('.reviewtype_bigger').hide();
+		$(this).find('.reviewtype_icons').show();
+	});
+});
+

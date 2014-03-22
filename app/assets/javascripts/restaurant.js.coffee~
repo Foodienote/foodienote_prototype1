@@ -1,0 +1,16 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+alert "hello"
+$ ->
+  $(".reviewtypes_clip_container").mouseover(->
+    $(this).find(".reviewtype_bigger").show()
+    $(this).find(".reviewtype_icons").hide()
+    return
+  ).mouseout ->
+    $(this).find(".reviewtype_bigger").hide()
+    $(this).find(".reviewtype_icons").show()
+    return
+
+  return
+

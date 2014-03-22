@@ -74,6 +74,7 @@
 
 .reviewtypes_clip_container img {
 	position:absolute;
+	max-width:92px;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -121,7 +122,7 @@
 	background-color:yellow;
 }
 #review_best_wrapper2 {
-	background:url('/assets/bestreview2.png') repeat-x;
+	background:url('/assets/reviewtype_bestreview2.png') repeat-x;
 	background-size:100%;
 }
 #review_best_wrapper3 {
@@ -166,7 +167,5 @@ border-bottom-right-radius: 15px;
 .review_content_right {
 	float:right;
 }
-.reviewtype_bigger {
-	display:none;
-	padding-top:50%;
-}
+
+

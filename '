@@ -1,5 +1,4 @@
 .menuitem_wrapper {
-	background-color:#e8e8e8;
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -63,6 +62,7 @@
 	float:left;
 	width:100%;
 	height:100px;
+	background-color:#f1f1f1;
 }
 
 .reviewtypes_clip_container {
@@ -74,6 +74,7 @@
 
 .reviewtypes_clip_container img {
 	position:absolute;
+	max-width:92px;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -107,66 +108,19 @@
 }
 
 .review_best_wrapper {
-	position:relative;
-	top:100px;
 	width:100%;
-	height:120px;
 }
 
-#review_best_wrapper0 {
-	background-color:pink;
-}
-
-#review_best_wrapper1 {
-	background-color:yellow;
-}
-#review_best_wrapper2 {
-	background:url('/assets/bestreview2.png') repeat-x;
-	background-size:100%;
-}
-#review_best_wrapper3 {
-	background-color:green;
-}
-#review_best_wrapper4 {
-	background-color:skyblue;
-}
-#review_best_wrapper5 {
-	background-color:#5180c3;
-}
 .review_content_wrapper {
-	width: 100%;
-	position:relative;
-	top:100px;
-	padding-top:4%;
 }
 
-.review_content_row {
+.review_content_wrapper table {
+	border-collapse: collapse;
+	height:100%;
+}
+
+
+.review_content_wrapper table tr {
 	background-color:white;
-	display:inline-block;
-	margin: auto 2%;
-	margin-bottom:2%;
-	padding:2%;
-	width:90%;
--webkit-border-radius: 35px;
--webkit-border-top-right-radius: 15px;
--webkit-border-bottom-right-radius: 15px;
--moz-border-radius: 35px;
--moz-border-radius-topright: 15px;
--moz-border-radius-bottomright: 15px;
-border-radius: 35px;
-border-top-right-radius: 15px;
-border-bottom-right-radius: 15px;
-	
-}
-
-.review_content_left {
-	float:left;
-}
-
-.review_content_right {
-	float:right;
-}
-.reviewtype_bigger {
-	display:none;
-	padding-top:50%;
+	border-radius:15px;
 }

@@ -1,6 +1,5 @@
-<%= javascript_include_tag "menu_item" %>
 <%= stylesheet_link_tag "menu_item" %>
-<div class="write_review_wrapper" style="display:none;">
+<div class="write_review_wrapper" style="display:block;">
 	<%= render 'comment/form' %>
 </div>
 <div class="menuitem_wrapper" style="display:block;">
@@ -24,20 +23,26 @@
 		</div>
 	</div>	
 	<div class="menuitem_picture"></div>
-	<div class="reviewtypes_wrapper">
+	<div align="center" class="reviewtypes_wrapper">
+		<%= render 'reviewtype/index' %>
 	</div>
-		
+	<div class="review_best_wrapper" id="review_best_wrapper<%= @reviewtype_index %>">
+	</div>
 	<div class="review_content_wrapper">
-		<table>
-	<%- @menu_item.comments.order(:date_created).reverse_order.each do |comment| %>
-	<%- #next if comment.user.nil? %>
-	<tr>
-		<td><%= comment.review_type %></td>
-		<td><%= comment.body %></td>
-	<td><%= comment.get_date_created() %></td>
-	</tr>
-<% end %>
-</table>
+		<%- @menu_item.comments.where(:review_type=>@review_type).order(:date_created).reverse_order.each do |comment| %>
+			<%- #next if comment.user.nil? %>
+		<div class="review_content_row">
+			<div class="review_content_left">
+				<%= comment.body %>
+			</div>
+			<div class="review_content_right">
+				<%= comment.get_date_created() %>
+			</div>
+			<div>
+				<div class="review_content_left"></div>
+			</div>
+		</div>
+		<% end %>
 	</div>
 </div>
 
@@ -45,10 +50,9 @@
 
 <BR>
 <h1>Review Types:</h1>
-<BR>
-<%= @menu_item.review_types %>
 <%= form_for @menu_item do |f| %>
 	<%= f.text_field :review_types, :value => ''%>
-	<BR>
 	<%= f.submit "Add" %>
 <% end %>
+
+

@@ -1,0 +1,28 @@
+<%= javascript_include_tag "reviewtype" %>
+<div class="reviewtypes_clip_container">
+	<%= link_to '?review_type=all&index=0' do %>
+		<img id="reviewtype0_bigger" class="reviewtype_bigger" src="/assets/reviewtype0bigger.png">
+		<img id="reviewtype0"  class="reviewtype_icons" src="/assets/reviewtype0.png">
+	<% end %>
+</div>
+<div class="reviewtypes_clip_container">
+	<%= link_to '?review_type=tips&index=1' do %>
+		<img id="reviewtype1_bigger"  class="reviewtype_icons" src="/assets/reviewtype1.png">
+		<img id="reviewtype1" class="reviewtype_bigger" src="/assets/reviewtype1bigger.png">
+	<% end %>
+</div>
+<% if @menu_item.review_types %>
+	<% review_types = @menu_item.review_types.split(",") %>
+	<% review_types.each_with_index do |review_type, index| %>
+		<% next if (index>3) %>
+		<div class="reviewtypes_clip_container">
+			<%= link_to '?review_type='+review_type+'&index='+ (index + 2).to_s do %>
+				<img id="reviewtype<%= index+2 %>_bigger" class="reviewtype_bigger" src="/assets/reviewtype<%= index + 2 %>bigger.png">
+				<img id="reviewtype<%= index + 2%>" class="reviewtype_icons" src="/assets/reviewtype<%= index + 2%>.png">
+				<p class="reviewtypes_clip_text" id="reviewtypes_clip_text<%= index + 2 %>">
+					<%= review_type.upcase %>
+				</p>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>

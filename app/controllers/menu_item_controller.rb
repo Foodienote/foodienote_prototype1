@@ -7,9 +7,20 @@ class MenuItemController < ApplicationController
 		@menu_item = @restaurant.menu_items.create(params[:menu_item]).permit(menu_item_params)
 	end
 	
+	def index
+	end
+
 	def show
 		@menu_item = MenuItem.find(params[:id])
 		@restaurant = Restaurant.find(@menu_item.restaurant_id)
+		@review_type = params[:review_type]
+		if @review_type.nil?
+			@review_type = "all"
+		end
+		@reviewtype_index = params[:index]
+		if @reviewtype_index.nil?
+			@reviewtype_index = "0";
+		end
 	end
 
 	def update

@@ -1,6 +1,6 @@
 .review_wrapper {
 	position:fixed;
-	width:600px;
+	width:38%;
 	min-height:364px;
 	background-color:#eeeeee;
 	margin: 10% auto;
@@ -80,7 +80,7 @@
 	overflow:auto;
 }
 
-.review_submit {
+.review_submit input[type="submit"]{
 	margin-top:40px;
 	background-color:#EA5552;
 	width:100%;
@@ -92,15 +92,4 @@
 	font-size:1.5em;
 	color:white;
 	padding-top:10px;
-}
-
-.review_submit input[type="submit"] {
-	border:none;
-	cursor:pointer;
-	display:inline-block;
-	height:40px;
-	width: 50px;
-	top:12px;
-	text-indent: -9999px;
-	-webkit-box-shadow: none;
 }

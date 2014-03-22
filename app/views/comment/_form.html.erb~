@@ -19,16 +19,14 @@
 </div>
 <div class="review_content">
 	<%= form_for :comment, url: comment_index_path(params.merge(:menu_item_id => @menu_item.locu_id)) do |f| %>
-		<%= f.text_field :tips_body, :class=>"review_body"%>
-		<% review_types = @menu_item.review_types.split(",") %>
-		<% review_types.each do |review_type| %>
-			<%= f.text_field (review_type), :class => "review_body"%>
-		<% end %>
-		<div class="review_submit">
-			<center>
-				<%= f.submit "Post a review" %>
-			</center>
-		</div>
+		<%= f.text_field :tips_body, :class="review_body"%>
+		<%= f.text_area :body, :class=>"review_body"%>
+	<% end %>
+	<div class="review_submit">
+	<center>
+		<%= f.submit "Post a review" %>
+	</center>
+	</div>
 	<% end %>
 </div>
 </div>
