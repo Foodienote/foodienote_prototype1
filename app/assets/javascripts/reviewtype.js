@@ -12,7 +12,6 @@ function getReviewTypeIndexSelected() {
 	return index;
 }
 	
-}
 /*
 $(function() {
   $(".reviewtypes_clip_container").mouseover(function() {

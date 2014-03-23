@@ -1,0 +1,18 @@
+<%- @menu_item.comments.order(:date_created).reverse_order.each do |comment| %>
+	<%- #next if comment.user.nil? %>
+	<div class="review_content_row">
+		<div class="review_content_left">
+			<%= comment.title %>
+		</div>
+		<div class="review_content_right">
+			<%= comment.get_date_created() %>
+		</div>
+	</div>
+	<%= if @review_type == "tips" %>
+	<div class="review_content_row">
+		<div class="review_content_body">
+			<%= comment.body %>
+		</div>
+	</div>
+	<% end %>
+<% end %>

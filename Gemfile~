@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-# Search, Sort, Paginate with AJAX
-gem 'will_paginate', '3.0.pre2'
-gem 'jquery-rails'
-
 # Devise for user
 gem 'devise', '~> 3.0.0.rc'
 

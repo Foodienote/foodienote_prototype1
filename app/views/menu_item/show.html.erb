@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag "menu_item" %>
-<div class="write_review_wrapper" style="display:block;">
+<div class="write_review_wrapper" style="display:none;">
 	<%= render 'comment/form' %>
 </div>
 <div class="menuitem_wrapper" style="display:block;">
@@ -29,20 +29,7 @@
 	<div class="review_best_wrapper" id="review_best_wrapper<%= @reviewtype_index %>">
 	</div>
 	<div class="review_content_wrapper">
-		<%- @menu_item.comments.where(:review_type=>@review_type).order(:date_created).reverse_order.each do |comment| %>
-			<%- #next if comment.user.nil? %>
-		<div class="review_content_row">
-			<div class="review_content_left">
-				<%= comment.body %>
-			</div>
-			<div class="review_content_right">
-				<%= comment.get_date_created() %>
-			</div>
-			<div>
-				<div class="review_content_left"></div>
-			</div>
-		</div>
-		<% end %>
+		<%= render 'comment/list' %>
 	</div>
 </div>
 

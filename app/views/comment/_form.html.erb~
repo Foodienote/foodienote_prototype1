@@ -1,3 +1,4 @@
+<%= javascript_include_tag "comment" %>
 <%= stylesheet_link_tag "comment" %>
 <div class="review_wrapper">
 <div class="review_header">
@@ -19,14 +20,13 @@
 </div>
 <div class="review_content">
 	<%= form_for :comment, url: comment_index_path(params.merge(:menu_item_id => @menu_item.locu_id)) do |f| %>
-		<%= f.text_field :tips_body, :class="review_body"%>
-		<%= f.text_area :body, :class=>"review_body"%>
-	<% end %>
-	<div class="review_submit">
-	<center>
+		<%= f.text_area :title, :class=>"review_body", :id=>"review_content_title", :maxlength => 150%>
+		<div id="review_content_title_counter" class="review_counter"></div>
+		<%= f.text_area :body, :class=>"review_body", :id=>"review_content_body", :maxlength => 500 %>
+		<div id="review_content_body_counter" class="review_counter"></div>
+	<div class="review_submit" align="center">
 		<%= f.submit "Post a review" %>
-	</center>
 	</div>
-	<% end %>
-</div>
-</div>
+</div>	<% end %>
+
+
